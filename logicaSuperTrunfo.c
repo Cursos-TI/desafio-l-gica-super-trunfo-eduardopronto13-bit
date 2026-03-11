@@ -6,31 +6,140 @@
 // Siga os comentários para implementar cada parte do desafio.
 
 int main() {
-    // Definição das variáveis para armazenar as propriedades das cidades
-    // Você pode utilizar o código do primeiro desafio
+    int carta1;
+    char estado1[20];
+    char codigodacarta1[20];
+    char nomedacidade1[20];
+    int população1;
+    float area1;
+    float pib1;
+    int pontosturisticos1;
+    float pibpercapita1;
+    float densidadepopulacional1;
+    float superpoder1;
 
+    int carta2;
+    char estado2[20];
+    char codigodacarta2[20];
+    char nomedacidade2[20];
+    int população2;
+    float area2;
+    float pib2;
+    int pontosturisticos2;
+    float pibpercapita2;
+    float densidadepopulacional2;
+    float superpoder2;
     
-    // Cadastro das Cartas:
-    // Implemente a lógica para solicitar ao usuário que insira os dados das cidades
-    // utilizando a função scanf para capturar as entradas.
-    // utilize o código do primeiro desafio
+     printf("Carta1\n");
+    
+    printf("Digite o estado: ");
+    scanf("%s", &estado1);
+    printf("O estado é: %s\n", estado1);
+    printf("Digite o código da carta: ");
+    scanf("%s", codigodacarta1);
+    printf("O código da carta é: %s\n", codigodacarta1);
+    printf("Digite o nome da cidade: ");
+    scanf("%s", &nomedacidade1);
+    printf("Cidade: %s\n", nomedacidade1);
+    printf("Digite a populacao: ");
+    scanf("%d", &população1);
+    printf("A população é: %d\n", população1);
+    printf("Digite a area: ");
+    scanf("%f", &area1);
+    printf("A área é: %f\n", area1);
+    printf("Digite o pib: ");
+    scanf("%f", &pib1);
+    printf("O PIB é: %f\n", pib1);
+    printf("Digite os pntos turisticos: ");
+    scanf("%d", &pontosturisticos1);
+    printf("Pontos Turísticos: %d\n", pontosturisticos1);
+    pibpercapita1 = (float) pib1 / população1;
+    densidadepopulacional1 = (float) população1 / area1;
+    printf("Pibpercapita: %f\n", pibpercapita1);
+    printf("Densidade Populacional: %f\n", densidadepopulacional1);
+    superpoder1 = (float) população1 + area1 + pib1 + pontosturisticos1 + (pibpercapita1 / 1);
 
-    // Exemplo:
-    // printf("Digite o código da cidade: ");
-    // scanf("%s", codigo);
-    // 
-    // (Repita para cada propriedade)
+    printf("Carta2\n");
 
-    // Comparação de Cartas:
-    // Desenvolva a lógica de comparação entre duas cartas.
-    // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
+    printf("Digite o estado: ");
+    scanf("%s", &estado2);
+    printf("O estado é: %s\n", estado2);
+    printf("Digite o código da carta: ");
+    scanf("%s", codigodacarta2);
+    printf("O código da carta é: %s\n", codigodacarta2);
+    printf("Digite o nome da cidade: ");
+    scanf("%s", &nomedacidade2);
+    printf("Cidade: %s\n", nomedacidade2);
+    printf("Digite a populacao: ");
+    scanf("%d", &população2);
+    printf("A população é: %d\n", população2);
+    printf("Digite a area: ");
+    scanf("%f", &area2);
+    printf("A área é: %f\n", area2);
+    printf("Digite o pib: ");
+    scanf("%f", &pib2);
+    printf("O PIB é: %f\n", pib2);
+    printf("Digite os pntos turisticos: ");
+    scanf("%d", &pontosturisticos2);
+    printf("Pontos Turísticos: %d\n", pontosturisticos2);
+    pibpercapita2 = (float) pib2 / população2;
+    densidadepopulacional2 = (float) população2 / area2;
+    printf("Pibpercapita: %f\n", pibpercapita2);
+    printf("Densidade Populacional: %f\n", densidadepopulacional2);
+    superpoder2 = (float) população2 + area2 + pib2 + pontosturisticos2 + (pibpercapita2 / 1);
 
-    // Exemplo:
-    // if (populacaoA > populacaoB) {
-    //     printf("Cidade 1 tem maior população.\n");
-    // } else {
-    //     printf("Cidade 2 tem maior população.\n");
-    // }
+    printf("Carta1\n", carta1);
+
+    printf("Estado: %s\n", estado1);
+    printf("Código da Carta: %s\n", codigodacarta1);
+    printf("Cideade: %s\n", nomedacidade1);
+    printf("População: %d pessoas\n", população1);
+    printf("Area: %.3f Km²\n", area1),
+    printf("Pib:R$ %.3f Reais\n", pib1);
+    printf("Pontos Turísticos: %d\n", pontosturisticos1);
+    printf("Pibpercapita: %.3f R$/Hab\n", pibpercapita1);
+    printf("Denaidade Populacional: %.3f Hab/Km²\n", densidadepopulacional1);
+    //printf("Superpoder: %.3f\n", superpoder1);
+    
+    printf("Carta2\n", carta2);
+
+    printf("Estado: %s\n", estado2);
+    printf("Código da Carta: %s\n", codigodacarta2);
+    printf("Cideade: %s\n", nomedacidade2);
+    printf("População: %d pessoas\n", população2);
+    printf("Area: %.3f Km²\n", area2),
+    printf("Pib:R$ %.3f Reais\n", pib2);
+    printf("Pontos Turísticos: %d\n", pontosturisticos2);
+    printf("Pibpercapita: %.3f R$/Hab\n", pibpercapita2);
+    printf("Denaidade Populacional: %.3f Hab/Km²\n", densidadepopulacional2);
+    //printf("Superpoder: %.3f\n", superpoder2);
+
+    if(população1 > população2){
+        printf("Carata 1 tem a maior população.\n");
+    } else{
+        pritf("Carta 2 tem a maior populaçãp.\n");
+    }
+    if(area1 > area2){
+        printf("Carta 1 tem maior área.\n");
+    }else {
+        printf("Carta 2 tem maior área\n");
+    }
+    if(pib1 > pib2){
+        printf("Carata 1 tem maior pib\n");
+    }else {
+        printf("Carta 2 tem maior pib\n");
+    }
+    if(pibpercapita1 > pibpercapita2){
+        printf("Carta 1 tem maior pibpercapita.\n");
+    }else{
+        printf("Carata 2 tem maior pibpercapita.\n");
+    }
+    if(densidadepopulacional1 > densidadepopulacional2){
+        printf("Carta 1 tem maior densidade populacional.\n");
+    }else{
+        printf("Carta 2 tem maior densiddade populacional.\n");
+    }
+    
 
     // Exibição dos Resultados:
     // Após realizar as comparações, exiba os resultados para o usuário.
