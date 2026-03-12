@@ -197,6 +197,50 @@ int main() {
         }else {
             printf("Resultado: Carta 2 (%s) venceu!\n", nomedacidade2);
     }
+    printf("Comparação de Caratas\n");
+        
+        printf("Carta 1 - %s: %d\n", nomedacidade1, população1);
+        printf("Carta 2 - %s: %d\n", nomedacidade2, população2);
+        if(população1 > população2){
+            printf("Resultado: Carta 1 (%s) venceu!\n", nomedacidade1);
+        }else {
+            printf("Resultado: Carta 2 (%s) venceu!\n", nomedacidade2);
+        }
+        printf("Carta 1 - %s: %.3f km²\n", nomedacidade1, area1);
+        printf("Carta 2 - %s: %.3f km²\n", nomedacidade2, area2);
+        if(area1 > area2) {
+            printf("Resultado: Carta 1 (%s) venceu!\n", nomedacidade1);
+        }else {
+            printf("Resultado: Carta 2 (%s) venceu!\n", nomedacidade2);
+        }
+        printf("Carta 1 - %s:R$ %.3f reais\n", nomedacidade1, pib1);
+        printf("Carta 2 - %s:R$ %.3f reais\n", nomedacidade2, pib2);
+        if(pib1 > pib2) {
+            printf("Resultado: Carta 1 (%s) venceu!\n", nomedacidade1);
+        }else {
+            printf("Resultado: Carta 2 (%s) venceu!\n", nomedacidade2);
+    }
+        printf("Carta 1 - %s: %d\n", nomedacidade1, pontosturisticos1);
+        printf("Carta 2 - %s: %d\n", nomedacidade2, pontosturisticos2);
+        if(pontosturisticos1 > pontosturisticos2) {
+            printf("Resultado: Carta 1 (%s) venceu!\n", nomedacidade1);
+        }else {
+            printf("Resultado: Carta 2 (%s) venceu!\n", nomedacidade2);
+    }
+        printf("Carta 1 - %s: %.3f reais/hab\n", nomedacidade1, pibpercapita1);
+        printf("Carta 2 - %s: %.3f reais/hab\n", nomedacidade2, pibpercapita2);
+        if(pibpercapita1 > pibpercapita2) {
+            printf("Resultado: Carta 1 (%s) venceu!\n", nomedacidade1);
+        }else {
+            printf("Resultado: Carta 2 (%s) venceu!\n", nomedacidade2);
+        }
+        printf("Carta 1 - %s: %.3f hab/km²\n", nomedacidade1, densidadepopulacional1);
+        printf("Carta 2 - %s: %.3f hab/km²\n", nomedacidade2, densidadepopulacional2);
+        if(densidadepopulacional1 < densidadepopulacional2) {
+            printf("Resultado: Carta 1 (%s) venceu!\n", nomedacidade1);
+        }else {
+            printf("Resultado: Carta 2 (%s) venceu!\n", nomedacidade2);
+    }
     
 
     
