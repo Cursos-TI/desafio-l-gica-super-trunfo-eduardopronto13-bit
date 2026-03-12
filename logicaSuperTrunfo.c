@@ -30,6 +30,8 @@ int main() {
     float densidadepopulacional2;
     float superpoder2;
     
+   //desenvolvi separadamente pois estava imprimindo apenas uma das cartas.
+
     printf("Carta1\n");
     
     printf("Digite o estado: ");
@@ -113,6 +115,8 @@ int main() {
     printf("Pibpercapita: %.3f R$/Hab\n", pibpercapita2);
     printf("Denaidade Populacional: %.3f Hab/Km²\n", densidadepopulacional2);
     //printf("Superpoder: %.3f\n", superpoder2);
+
+    //separei individualmente pois estava imprimindo a mesma carta dublicada.
 
     if(população1 > população2){
         printf("Carta 1 tem a maior população.\n");
