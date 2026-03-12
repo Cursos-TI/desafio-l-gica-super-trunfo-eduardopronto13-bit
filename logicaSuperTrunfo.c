@@ -7,8 +7,8 @@
 
 int main() {
     int carta1;
-    char estado1[20];
-    char codigodacarta1[20];
+    char estado1[3];
+    char codigodacarta1[3];
     char nomedacidade1[20];
     int população1;
     float area1;
@@ -19,8 +19,8 @@ int main() {
     float superpoder1;
 
     int carta2;
-    char estado2[20];
-    char codigodacarta2[20];
+    char estado2[3];
+    char codigodacarta2[3];
     char nomedacidade2[20];
     int população2;
     float area2;
@@ -30,7 +30,7 @@ int main() {
     float densidadepopulacional2;
     float superpoder2;
     
-     printf("Carta1\n");
+    printf("Carta1\n");
     
     printf("Digite o estado: ");
     scanf("%s", &estado1);
@@ -115,29 +115,39 @@ int main() {
     //printf("Superpoder: %.3f\n", superpoder2);
 
     if(população1 > população2){
-        printf("Carata 1 tem a maior população.\n");
+        printf("Carta 1 tem a maior população.\n");
+        printf("Carta 1 venceu!\n");
     } else{
-        pritf("Carta 2 tem a maior populaçãp.\n");
+        printf("Carta 2 tem a maior população.\n");
+        printf("Carta 2 Venceu!\n");
     }
     if(area1 > area2){
         printf("Carta 1 tem maior área.\n");
+        printf("Carta 1 venceu!\n");
     }else {
         printf("Carta 2 tem maior área\n");
+        printf("Carta 2 Venceu!\n");
     }
     if(pib1 > pib2){
         printf("Carata 1 tem maior pib\n");
+        printf("Carta 1 venceu!\n");
     }else {
         printf("Carta 2 tem maior pib\n");
+        printf("Carta 2 Venceu!\n");    
     }
     if(pibpercapita1 > pibpercapita2){
         printf("Carta 1 tem maior pibpercapita.\n");
+        printf("Carta 1 venceu!\n");
     }else{
         printf("Carata 2 tem maior pibpercapita.\n");
+        printf("Carta 2 Venceu!\n");
     }
     if(densidadepopulacional1 > densidadepopulacional2){
         printf("Carta 1 tem maior densidade populacional.\n");
+        printf("Carta 2 Venceu!\n");
     }else{
         printf("Carta 2 tem maior densiddade populacional.\n");
+        printf("Carta 1 venceu!\n");
     }
     
 
