@@ -118,9 +118,9 @@ int main() {
 
     //separei individualmente pois estava imprimindo a mesma carta dublicada.
 
-    if(população1 > população2){
+    if(população1 > população2){ // compação individual de cada tópico inserido
         printf("Carta 1 tem a maior população.\n");
-        printf("Carta 1 venceu!\n");
+        printf("Carta 1 venceu!\n"); // resultado parcial da comparação
     } else{
         printf("Carta 2 tem a maior população.\n");
         printf("Carta 2 Venceu!\n");
@@ -153,14 +153,53 @@ int main() {
         printf("Carta 2 tem maior densiddade populacional.\n");
         printf("Carta 1 venceu!\n");
     }
+    printf("Comparação de Caratas\n");// comparação individual de cada característica das cartas
+        
+        printf("Carta 1 - %s: %d\n", nomedacidade1, população1);//utilizei as informações ja inseridas pra comparação
+        printf("Carta 2 - %s: %d\n", nomedacidade2, população2);
+        if(população1 > população2){
+            printf("Resultado: Carta 1 (%s) venceu!\n", nomedacidade1);
+        }else {
+            printf("Resultado: Carta 2 (%s) venceu!\n", nomedacidade2);
+        }
+        printf("Carta 1 - %s: %.3f km²\n", nomedacidade1, area1);
+        printf("Carta 2 - %s: %.3f km²\n", nomedacidade2, area2);
+        if(area1 > area2) {
+            printf("Resultado: Carta 1 (%s) venceu!\n", nomedacidade1);
+        }else {
+            printf("Resultado: Carta 2 (%s) venceu!\n", nomedacidade2);
+        }
+        printf("Carta 1 - %s:R$ %.3f reais\n", nomedacidade1, pib1);
+        printf("Carta 2 - %s:R$ %.3f reais\n", nomedacidade2, pib2);
+        if(pib1 > pib2) {
+            printf("Resultado: Carta 1 (%s) venceu!\n", nomedacidade1);
+        }else {
+            printf("Resultado: Carta 2 (%s) venceu!\n", nomedacidade2);
+    }
+        printf("Carta 1 - %s: %d\n", nomedacidade1, pontosturisticos1);
+        printf("Carta 2 - %s: %d\n", nomedacidade2, pontosturisticos2);
+        if(pontosturisticos1 > pontosturisticos2) {
+            printf("Resultado: Carta 1 (%s) venceu!\n", nomedacidade1);
+        }else {
+            printf("Resultado: Carta 2 (%s) venceu!\n", nomedacidade2);
+    }
+        printf("Carta 1 - %s: %.3f reais/hab\n", nomedacidade1, pibpercapita1);
+        printf("Carta 2 - %s: %.3f reais/hab\n", nomedacidade2, pibpercapita2);
+        if(pibpercapita1 > pibpercapita2) {
+            printf("Resultado: Carta 1 (%s) venceu!\n", nomedacidade1);
+        }else {
+            printf("Resultado: Carta 2 (%s) venceu!\n", nomedacidade2);
+        }
+        printf("Carta 1 - %s: %.3f hab/km²\n", nomedacidade1, densidadepopulacional1);
+        printf("Carta 2 - %s: %.3f hab/km²\n", nomedacidade2, densidadepopulacional2);
+        if(densidadepopulacional1 < densidadepopulacional2) {
+            printf("Resultado: Carta 1 (%s) venceu!\n", nomedacidade1);
+        }else {
+            printf("Resultado: Carta 2 (%s) venceu!\n", nomedacidade2);
+    }
     
 
-    // Exibição dos Resultados:
-    // Após realizar as comparações, exiba os resultados para o usuário.
-    // Certifique-se de que o sistema mostre claramente qual carta venceu e com base em qual atributo.
-
-    // Exemplo:
-    // printf("A cidade vencedora é: %s\n", cidadeVencedora);
+    
 
     return 0;
 }
