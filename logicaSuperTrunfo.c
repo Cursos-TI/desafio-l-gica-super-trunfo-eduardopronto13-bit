@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
- 
+ //Entrada de dados.
 int main() {
-    int opcao;
+    int primeiraOpcao, segundaOpcao;
+    int resultado1, resultado2;
     int carta1;
     char estado1[20];
     char nomedacidade1[20];
@@ -25,7 +26,8 @@ int main() {
     float pibpercapita2;
     float densidadepopulacional2;
     float superpoder2;
-    
+
+    //Geração das cartas
     printf("Carta1\n", carta1);
     
     printf("Digite o estado: ");//desenvolvi separadamente pois estava imprimindo apenas uma das cartas.
@@ -50,8 +52,7 @@ int main() {
     densidadepopulacional1 = (float) população1 / area1;
     printf("Pibpercapita: %f\n", pibpercapita1);
     printf("Densidade Populacional: %f\n", densidadepopulacional1);
-    superpoder1 = (float) população1 + area1 + pib1 + pontosturisticos1 + (pibpercapita1 / 1);
-
+    
     printf("Carta2\n", carta2);
 
     printf("Digite o estado: ");
@@ -76,11 +77,11 @@ int main() {
     densidadepopulacional2 = (float) população2 / area2;
     printf("Pibpercapita: %f\n", pibpercapita2);
     printf("Densidade Populacional: %f\n", densidadepopulacional2);
-    superpoder2 = (float) população2 + area2 + pib2 + pontosturisticos2 + (pibpercapita2 / 1);
-
+    
+    // imprimindo resultado das cartas
     printf("Carta1\n");
 
-    printf("Estado: %s\n", estado1);
+    printf("Estado: %s\n", estado1);// imprimi resultado de cada carta individualmente
     printf("Cideade: %s\n", nomedacidade1);
     printf("População: %d pessoas\n", população1);
     printf("Area: %.3f Km²\n", area1),
@@ -100,8 +101,23 @@ int main() {
     printf("Pibpercapita: %.3f R$/Hab\n", pibpercapita2);
     printf("Denaidade Populacional: %.3f Hab/Km²\n", densidadepopulacional2);
     
+    srand(time(0));
+    população1 = 1;
+    população2 = 0;
+    area1 = 1;
+    area2 = 0;
+    pib1 = 1;
+    pib2 = 0;
+    pontosturisticos1 = 1;
+    pontosturisticos2 = 0;
+    pibpercapita1 = 1;
+    pibpercapita2 = 0;
+    densidadepopulacional1 = 1;
+    densidadepopulacional2 = 0;
+
+    //Gerando menu interativo do jogo
     printf("*** Jogo Super Trunfo ***\n");
-    printf("Escolha uma opção\n");
+    printf("Escolha a primeira opção\n");
     printf("1. Populaçao\n");
     printf("2. Area\n");
     printf("3. Pib\n");
@@ -109,53 +125,90 @@ int main() {
     printf("5. Pibpercapita\n");
     printf("6. Dendidade Populacional\n");
     printf("Escolha: ");
-    scanf("%d", &opcao);
+    scanf("%d", &primeiraOpcao);
 
-       switch (opcao){
+switch (primeiraOpcao){
 case 1:
-    printf("População\n");
-    printf("Carta 1 - %s: %d pessoas\n", nomedacidade1, população1);
-    printf("Carta 2 - %s: %d pessoas\n", nomedacidade2, população2);
-    break;
+    printf("Você escolheu população\n");
+    resultado1 = população1 > população2 ? 1 : 0;
 case 2:
-    printf("Area\n");
-    printf("Carta 1 - %s: %.3f km²\n", nomedacidade1, area1);
-    printf("Carta 2 - %s: %.3f km²\n", nomedacidade2, area2);
+    printf("Veacê escolheu área\n");
+    resultado1 = area1 > area2 ? 1 : 0;
     break;
 case 3:
-    printf("Pib\n");
-    printf("Carta 1 - %s:R$ %.3f reais\n", nomedacidade1, pib1);
-    printf("Carta 2 - %s:R$ %.3f reais\n", nomedacidade2, pib2);  
+    printf("Você escolheau pib\n");
+    resultado1 = pib1 > pib2 ? 1 : 0;
     break;
 case 4:
-    printf("Pontos Turísticos\n");
-    printf("Carta 1 - %s: %d\n", nomedacidade1, pontosturisticos1);
-    printf("Carta 2 - %s: %d\n", nomedacidade2, pontosturisticos2);
+    printf("Você escolheu pontos turísticos\n");
+    resultado1 = pontosturisticos1 > pontosturisticos2 ? 1 : 0;
     break;
 case 5:
-    printf("Pibpercapita\n");
-    printf("Carta 1 - %s: %.3f reais/hab\n", nomedacidade1, pibpercapita1);
-    printf("Carta 2 - %s: %.3f reais/hab\n", nomedacidade2, pibpercapita2);
+    printf("Você escolheu pibpercapita\n");
+    resultado1 = pibpercapita1 > pibpercapita2 ? 1 : 0;
     break;
 case 6:
-    printf("Densidade Populacional\n");
-    printf("Carta 1 - %s: %.3f hab/km²\n", nomedacidade1, densidadepopulacional1);
-    printf("Carta 2 - %s: %.3f hab/km²\n", nomedacidade2, densidadepopulacional2);
+    printf("Você escolheu densidade populacional!\n");
+    resultado1 = densidadepopulacional1 < densidadepopulacional2 ? 1 : 0;
     break;                
 default:
     printf("Opção inválida\n");
     break;
 }
-if ((população1 == população2) || (area1 == area2) || (pib1 == pib2) || (pontosturisticos1 == pontosturisticos2)
-     ||(pibpercapita1 == pibpercapita2) || (densidadepopulacional1 == densidadepopulacional2)){
-    printf("Empate entre os atributos\n");
-} else if((população1 > população2) || (area1 > area2) || (pib1 > pib2) || (pontosturisticos1 > pontosturisticos2)
-     ||(pibpercapita1 > pibpercapita2) || (densidadepopulacional1 < densidadepopulacional2)){
-      printf("Carata 1 veceu\n");
-     }else{
-        printf("Carta 2 venceu\n");
-     }
 
+    printf("Escolha a segunda opção\n");
+    printf("1. Populaçao\n");
+    printf("2. Area\n");
+    printf("3. Pib\n");
+    printf("4. Pontos Turísticos\n");
+    printf("5. Pibpercapita\n");
+    printf("6. Dendidade Populacional\n");
+    printf("Escolha: ");
+    scanf("%d", &segundaOpcao);
 
+    if(primeiraOpcao == segundaOpcao){
+        printf("Você escolheu a mesma opção!\n");
+    }else {
+        switch (segundaOpcao){
+case 1:
+    printf("Você escolheu população\n");
+     resultado2 = população2 > população1 ? 1 : 0;
+case 2:
+    printf("Você esolheu área\n");
+     resultado2 = area2 > area1 ? 1 : 0;
+    break;
+case 3:
+    printf("Você escolheu pib\n");
+    resultado2 = pib2 > pib1 ? 1 : 0;
+    break;
+case 4:
+    printf("Vocâe escolheu pontos turísticos\n");
+    resultado2 = pontosturisticos2 > pontosturisticos1 ? 1 : 0;
+    break;
+case 5:
+    printf("Você escolheu pibpercapita\n");
+    resultado2 = pibpercapita2 > pibpercapita1 ? 1 : 0;
+    break;
+case 6:
+    printf("Você escolheu densidade populacional\n");
+    resultado2 = densidadepopulacional2 < densidadepopulacional1 ? 1 : 0;
+    break;                
+default:
+    printf("Opção inválida\n");
+    break;
+}
+}
+    if(resultado1 && resultado2){
+        printf("Carata 1 veceu!\n");
+    } else if(resultado1 != resultado2){
+        printf("Empate!\n");
+    }else {
+        printf("Carta 2 venceu!\n");
+    }
 
 }
+
+     
+
+
+
