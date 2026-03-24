@@ -197,6 +197,7 @@ default:
     printf("Opção inválida\n");
     break;
 }
+    printf("Cidades: %s\n %s\n", nomedacidade1, nomedacidade2);
 }
     if(resultado1 && resultado2){
         printf("Carata 1 veceu!\n");
